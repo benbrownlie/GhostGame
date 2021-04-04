@@ -17,6 +17,8 @@ public class MovementBehavior : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Vertical"))
-            _rigidbody.AddForce(new Vector3(MoveForce, 0, 0), ForceMode.Impulse);
+            _rigidbody.AddForce(new Vector3(0, 0, MoveForce), ForceMode.Force);
+        if (Input.GetButtonDown("Horizontal"))
+            _rigidbody.AddForce(new Vector3(MoveForce, 0, 0), ForceMode.Force);
     }
 }
